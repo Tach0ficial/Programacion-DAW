@@ -13,8 +13,8 @@ import os
 
 os.system("cls")
 
-inittial = int(input("Indica el numero inicial: "))
+initial = int(input("Indica el numero inicial: "))
 final = int(input("Indica el numero final: "))
-for i in range(inittial + 1, final):
+for i in range(initial + 1, final):
     if i % 2 == 0:
         print(f"El número {i} es par")
