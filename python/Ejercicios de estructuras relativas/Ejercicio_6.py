@@ -16,6 +16,6 @@ os.system("cls")
 n1 = float(input("Introduce la base: "))
 n2 = int(input("Introduce el exponente: "))
 base = n1
-for i in range(n2-1):
+for i in range(abs(n2)-1):
     n1 = n1 * base
 print(f"El resultado de la potencia es: {n1}")
