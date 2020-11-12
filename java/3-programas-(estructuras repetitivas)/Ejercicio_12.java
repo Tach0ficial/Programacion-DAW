@@ -9,16 +9,25 @@
  */
 import java.util.Scanner;
 
-public class Ejercicio_11 { // Clase principal
+public class Ejercicio_12 { // Clase principal
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
         System.out.print("Dime los numero que quieres que salgan: ");
         int numero = Integer.parseInt(s.nextLine());
-
+        int anteriorX2 = 0;
+        int anterior = 1;
+        int ahora = 0;
+        System.out.println(anteriorX2);
+        System.out.println(anterior);
         
-        for (int i = numero; i < numero+5; i++) {
-            
+
+        for (int i =0; i < numero-2; i++) {
+
+            ahora = anterior + anteriorX2;
+            System.out.println(ahora);
+            anteriorX2 = anterior;
+            anterior = ahora;
         }
         
     }
