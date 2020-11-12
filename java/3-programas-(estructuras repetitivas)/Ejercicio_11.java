@@ -6,12 +6,17 @@
  */
 import java.util.Scanner;
 
-public class Ejercicio_10 { // Clase principal
+public class Ejercicio_11 { // Clase principal
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
         System.out.print("Dime un numero: ");
-        numero = Integer.parseInt(s.nextLine());
+        int numero = Integer.parseInt(s.nextLine());
+
+        System.out.printf("\n %8s  %14s %8s \n------------------------------------", "Numero", "Cuadrado", "Cubo" );
+        for (int i = numero; i < numero+5; i++) {
+            System.out.printf("\n %5d    -->>   %5d %10d ", i, i*i, i*i*i );
+        }
         
     }
 }
