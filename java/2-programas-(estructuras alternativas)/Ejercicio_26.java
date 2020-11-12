@@ -32,83 +32,56 @@ import java.util.Scanner;
         boolean tieneTarjeta = (s.nextLine()).equals("s");
         
         double precio= 0;
-        String tipoEntrada = "";
-        String entradaPareja = "";
+        
         double total=0; 
-        double descuento=0;
-        double precioPareja=0;
-        double precioIndividual=0;
-      
-        String entradaIndividual = "";
+        double descuento=0;        
+        double precioPareja=11;
+        double entradasParejas = 0;
+        double precioIndividual = 8;
+        double entradasIndividuales = entradas;
         
         switch (dia) {
             case "miercoles":
-                precio = 5*entradas;
+                precioIndividual= 5;
                 break;
             case "jueves":
-                if (entradas==2) {
-                    precio = 11;
-                    precioPareja = 11;
-                    entradaPareja = "Entradas de parejas";
-                }else if (entradas==6){
-                    precio = 33;
-                    precioPareja = 11;
-                    entradaPareja = "Entradas de parejas";
-                }else if (entradas==7){
-                    precio = 41;
-                    precioPareja = 11;
-                    precioIndividual = 8;
-                    entradaPareja = "Entradas de parejas";
-                    entradaIndividual = "Entradas individuales";
-                }
-                else{
-                    entradaIndividual = "Entradas individuales";
-                    precioIndividual = 8;
-                    precio = 8*entradas;
-                }
-                break;
-            case "martes":
-            case "viernes":
-            case "sabado":
-            case "lunes":
-                precioIndividual = 8;
-                entradaIndividual = "Entradas individuales";
-                precio = 8*entradas;
-                if (tieneTarjeta == true) {
-                    descuento = precio*0.10;
-                    total =  precio - descuento;
-                }else{
-
-                }
+                entradasParejas = (int) entradas / 2; //las entradas de las parejas.
+                entradasIndividuales = entradas % 2; //el resto de las entradas.
                 break;
             default:
                 System.out.print("Se a equivocado al escribir el dia.");
                 System.exit(0);
                 break;
             }
-        System.out.println("Aqui tiene sus entradas. Gracias por su compra.");
-        System.out.printf("%s %d",entradaIndividual,entradas);
-        System.out.printf("Precio por entrada individual %d €",precioIndividual);
-        System.out.printf("%s %d",entradaPareja,entradas);
-        System.out.printf("Precio por entrada de pareja %d €",precioPareja);
-        System.out.printf("Total %d",precio);
-        System.out.printf("Descuento %d",descuento);
-        System.out.printf("A pagar %d",total);
+
+            precio = precioIndividual * entradasIndividuales;
+            precio += 11 * entradasParejas;
+
+            if (tieneTarjeta) {
+                descuento = precio * 0.10;
+            }
+
+            total = precio - descuento;
+
+
+        System.out.println("\nAqui tiene sus entradas. Gracias por su compra.");
+        System.out.println("-----------------------------------------------");
+        if (entradasIndividuales > 0) {
+        System.out.printf("Entradas individuales                      %.0f\n",entradasIndividuales);
+        System.out.printf("Precio por entrada individual     %.2f euros\n",precioIndividual);
+        }
+
+        if (entradasParejas > 0) {
+        System.out.printf("Entradas de pareja                         %.0f\n",entradasParejas);
+        System.out.printf("Precio por entrada de pareja      %.2f euros\n",precioPareja);
+        }
+
+        System.out.printf("Total                            %.2f euros\n",precio);
+        System.out.printf("Descuento                         %.2f euros\n",descuento);
+        System.out.printf("A pagar                          %.2f euros\n",total);
         
 
         
     }
 }
 
-
-// Venta de entradas CineCampa
-// Número de entradas: 4
-// Día de la semana: viernes
-// ¿Tiene tarjeta CineCampa? (s/n): s
-
-// Aquí tiene sus entradas. Gracias por su compra.
-// Entradas individuales            4
-// Precio por entrada individual    8.00 €
-// Total                            32.00 €
-// Descuento                        3.20 €
-// A pagar                          28.80 €

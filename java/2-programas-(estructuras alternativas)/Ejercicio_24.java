@@ -54,6 +54,7 @@ public class Ejercicio_24 { // Clase principal
         double sueldoNeto = 0;
         double porcentajeMin =  0;
         String porcentaje = "";
+        
         if (civilEstate == 1) {
             sueldoNeto = sueldoBruto - sueldoBruto * 0.25;
             porcentajeMin = sueldoBruto * 0.25;
