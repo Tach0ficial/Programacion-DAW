@@ -1,7 +1,6 @@
 /**
- * Escribe un programa que diga si un número introducido por teclado es o no
- * primo. Un número primo es aquel que sólo es divisible entre él mismo y la
- * unidad.
+ * Escribe un programa que calcule el factorial de un número entero leído por
+ * teclado.
  *
  * @author Carlos Hidalgo Risco
  */
@@ -11,9 +10,17 @@ public class Ejercicio_28 { // Clase principal
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
-        System.out.print("");
+        System.out.print("Por favor, introduzca un número entero: ");
         int numero = Integer.parseInt(s.nextLine());
-       
+        int factorial = 0;
+        int multi = 1 ;  
+
+        for (int i = 1; i < numero; i++) {
+            factorial =  multi * (i+1);
+            multi = multi * (i+1);
+        } 
+        System.out.println(numero+"! = "+factorial);
+        
         
     }
 }
