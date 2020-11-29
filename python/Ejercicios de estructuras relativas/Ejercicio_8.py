@@ -16,8 +16,18 @@ import os
 
 os.system("cls")
 
-suma = 0
+horas = 0
+minutos = 0
+segundos = 0
 
-for i in range(1, 1001):
-    suma += i
-print(suma)
+segundos += 1
+
+if segundos == 60:
+    segundos = 0
+    minutos += 1
+    if minutos == 60:
+        minutos = 0
+        horas += 1
+
+#ponemos el curso a la derecha
+print(8 * "\b", end="")

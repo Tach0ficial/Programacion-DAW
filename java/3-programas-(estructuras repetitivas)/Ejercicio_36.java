@@ -16,11 +16,10 @@ public class Ejercicio_36 { // Clase principal
         System.out.print("Por favor, introduzca un número entero positivo: ");
         long numero = Long.parseLong(s.nextLine());
         boolean capicua = true;
-        String numeroString = numero; 
         String delReves = "";
-        
-        for (int i = 0; i > numeroString.length; i--) {
-            delReves = ""+i;
+
+        for (long i = Long.toString(numero).length(); i >= 0 ; i--) {
+            delReves = ""+Long.toString(i);
         }
     }
 }
