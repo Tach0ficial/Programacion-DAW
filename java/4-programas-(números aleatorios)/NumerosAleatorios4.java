@@ -29,12 +29,20 @@ public class NumerosAleatorios4 {
 		
 		System.out.print("Por favor, introduzca la longitud de la serpiente en caracteres contando la cabeza: ");
         int longitud = s.nextInt();
-        int random = 0; 
-        System.out.printf("%13s\n","@");
+        int serpenteo = 0; 
+        int espacios= 12; 
+        System.out.printf(" ".repeat(espacios)+"@\n");
 
         for (int i = 0; i < longitud; i++) {
-            random = (int) (Math.random()*(14-13+1)+13);
-            System.out.printf("%"+random+"s\n","*");
+            serpenteo = (int) (Math.random()*3) - 1; //genero un numero aleatorio que sera 1 0 o -1
+            espacios += serpenteo;
+            if (espacios < 2 ) {
+                espacios++;
+            }
+            if (espacios > 25) {
+                espacios--;
+            }
+            System.out.println(" ".repeat(espacios)+"*");
         }
 	}
 }

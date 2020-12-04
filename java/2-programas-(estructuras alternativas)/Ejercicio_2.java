@@ -12,16 +12,15 @@ public class Ejercicio_2 { // Clase principal
       System.out.print("Introduce la hora: ");
       int hour = Integer.parseInt(System.console().readLine());
 
-      if ((hour >=6) && (hour <= 12)){
-        System.out.print("Buenos d\u00edas");
-      }else if ((hour >=13) && (hour <= 20)){
-        System.out.print("Buenas tardes");
-      }else if ((hour >=21) && (hour <= 24) || (hour >=1)&&(hour <=5)){
-        System.out.print("Buenas noches");
-      }else{
-      System.out.println("La hora introducida no es correcta.");
-    }
-      
+        if ((hour >=6) && (hour <= 12)){
+          System.out.print("Buenos dias");
+        }else if ((hour >=13) && (hour <= 20)){
+          System.out.print("Buenas tardes");
+        }else if ((hour >=21) && (hour <= 24) || (hour >=1)&&(hour <=5)){
+          System.out.print("Buenas noches");
+        }else{
+        System.out.println("La hora introducida no es correcta.");
+      }
     }
 }
     
