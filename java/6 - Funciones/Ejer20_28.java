@@ -1,6 +1,6 @@
 package funciones;
 
-import funciones.arrays;
+import matematicas.arrays;
 
 public class Ejer20_28 {
 
@@ -14,27 +14,30 @@ public class Ejer20_28 {
 		
 		
 		//minimoArrayInt------------------------
-		System.out.println();
-
+		System.out.println("El minimo es: "+matematicas.arrays.minimoArrayInt(pepe));
+		
 		
 		//maximoArrayInt------------------------
-		System.out.println();
+		System.out.println("El maximo es: "+matematicas.arrays.maximoArrayInt(pepe));
 
 		
 		//mediaArrayInt-------------------------
-		System.out.println();
+		System.out.println("La media es: "+matematicas.arrays.mediaArrayInt(pepe));
 
 		
 		//estaEnArrayInt------------------------
-		System.out.println();
-
+		if (matematicas.arrays.estaEnArrayInt(pepe, 2)) {
+			System.out.println("2 esta en el array.");
+		}else {
+			System.out.println("2  no esta en el array.");
+		}
 		
 		//posicionEnArray------------------------
-		System.out.println();
+		System.out.println(matematicas.arrays.posicionEnArray(pepe, 2));
 		
 		
 		//volteaArrayInt------------------------
-		System.out.println();
+		System.out.println(matematicas.arrays.volteaArrayInt(pepe));
 		
 		
 		//rotaDerechaArrayInt------------------------
@@ -43,7 +46,6 @@ public class Ejer20_28 {
 		for (int i = 0; i < pepe.length; i++) {
 			System.out.println(pepe[i]);
 		}
-		
 		
 	}
 }
