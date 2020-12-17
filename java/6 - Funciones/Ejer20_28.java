@@ -46,6 +46,5 @@ public class Ejer20_28 {
 		for (int i = 0; i < pepe.length; i++) {
 			System.out.println(pepe[i]);
 		}
-		
 	}
 }
